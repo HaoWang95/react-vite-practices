@@ -1,10 +1,21 @@
+import { Grid } from "@mui/material";
+import React from "react";
+import Header from "../header/Header.component";
 
-const Layout = () => {
+interface LayoutProps {
+  children?: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <div>Header</div>
-      <div>content</div>
-      <div>Footer</div>
+      <Grid>
+        <Header />
+      </Grid>
+      {children}
+      <Grid>
+
+      </Grid>
     </>
   );
 };

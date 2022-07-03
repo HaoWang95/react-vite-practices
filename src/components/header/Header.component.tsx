@@ -1,11 +1,20 @@
-import { AppBar, Grid } from "@mui/material";
+import { AppBar, Grid, IconButton, Toolbar } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
-interface HeaderProps {}
+interface HeaderProps { }
 
 const Header = () => {
   return (
     <>
-      <Grid container spacing={1}></Grid>
+      <Grid container spacing={1}>
+        <AppBar color="primary">
+          <Toolbar>
+            <IconButton>
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </Grid>
     </>
   );
 };

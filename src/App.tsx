@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { ThemeProvider } from '@mui/system'
 import Layout from './components/layout/Layout.component'
+import theme from './theme/theme'
 
 function App() {
 
   return (
-    <div className="App">
-      <Layout />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Layout>
+          <h1>App content in Layout</h1>
+        </Layout>
+      </div>
+    </ThemeProvider>
   )
 }
 
